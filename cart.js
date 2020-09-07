@@ -24,6 +24,7 @@ var siamount= document.getElementById("siamount").innerText;
         var Newfiamount=fiamount*Currentamount
         document.getElementById("fival").value = Currentamount;
         document.getElementById("fiamount").innerText=Newfiamount;
+        totalPrice()
     }
 
     function caseCOunt (isIncrease){
@@ -37,6 +38,27 @@ var siamount= document.getElementById("siamount").innerText;
         var sNewfiamount=siamount*sCurrentamount
         document.getElementById("sival").value = sCurrentamount;
         document.getElementById("siamount").innerText=sNewfiamount;
+        totalPrice()
+    }
+
+
+
+    function totalPrice(){
+        const fnum =document.getElementById("fival").value;
+        const fval =parseFloat(fnum);
+        const snum =document.getElementById("sival").value;
+        const sval =parseFloat(snum);
+        
+
+
+        document.getElementById("totalPrice").innerText = fval*1219 +sval*59
+ 
+    }
+
+    function eval(product){
+        const productnum =document.getElementById(product+"ival").value;
+        const productval =parseFloat(productnum); 
+        return productval
     }
 
 
