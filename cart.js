@@ -1,15 +1,19 @@
+
+// var declare of first element amount
+
+
 var addNum =document.getElementById("fiadd");
 var Currentamount =document.getElementById("fival").value;
     Currentamount=parseFloat(Currentamount);
 var fiamount= document.getElementById("fiamount").innerHTML;
     fiamount=parseFloat(fiamount);
 
-var total =document.getElementById("total");    
+    
 
 
    
 
-
+// first element add number as well as price increase 
 
 addNum.addEventListener("click",function(){
 
@@ -17,45 +21,42 @@ addNum.addEventListener("click",function(){
     var Newfiamount=fiamount*Currentamount
     document.getElementById("fival").value = Currentamount;
     document.getElementById("fiamount").innerHTML=Newfiamount;
-    total = sNewfiamount+Newfiamount;
-document.getElementById("total").innerText=total;
+  
     
     
     
 })
-
+// first element remove element and min price
 var minNum =document.getElementById("fimin");
 minNum.addEventListener("click",function(){
     Currentamount=Currentamount-1;
     document.getElementById("fival").value = Currentamount;
     var Newfiamount=fiamount*Currentamount;
     document.getElementById("fiamount").innerHTML=Newfiamount
-    total = sNewfiamount+Newfiamount;
-document.getElementById("total").innerText=total;
+  
 
 })
 
-// second element
+// second element var declare
 var saddNum =document.getElementById("siadd");
 var sCurrentamount =document.getElementById("sival").value;
     sCurrentamount=parseFloat(sCurrentamount);
 var siamount= document.getElementById("siamount").innerHTML;
     siamount=parseFloat(siamount); 
     
-    // variable declare
+    // add and add price second element
 saddNum.addEventListener("click",function(){
 
     sCurrentamount=sCurrentamount+1;
     var sNewfiamount=siamount*sCurrentamount
     document.getElementById("sival").value = sCurrentamount;
     document.getElementById("siamount").innerHTML=sNewfiamount;
-    total = sNewfiamount+Newfiamount;
-document.getElementById("total").innerText=total;
+
     
     
     
 })
-
+ // remove and min price second element
 var sminNum =document.getElementById("simin");
 sminNum.addEventListener("click",function(){
     sCurrentamount=sCurrentamount-1;
@@ -70,9 +71,15 @@ sminNum.addEventListener("click",function(){
 // add amount final chalan
 
 
+// var clickAll = document.getElementsByClassName("btn-default")
+// for (let i = 0; i < clickAll.length; i++) {
+//     let element = clickAll[i];
+//     element.addEventListener("click",function(){
+//         console.log(element)
+//     })
 
-var total =document.getElementById("tax");
-var total =document.getElementById("actualTotal");
+    
+// }
 
 
 
