@@ -5,8 +5,52 @@
 var addNum =document.getElementById("fiadd");
 var Currentamount =document.getElementById("fival").value;
     Currentamount=parseFloat(Currentamount);
-var fiamount= document.getElementById("fiamount").innerHTML;
+var fiamount= document.getElementById("fiamount").innerText;
     fiamount=parseFloat(fiamount);
+
+
+
+
+
+    addNum.addEventListener("click",function(){
+
+        addRemove(true) 
+      
+        
+        
+        
+    })
+    var minNum =document.getElementById("fimin");
+
+    minNum.addEventListener("click",function(){
+
+        addRemove(false) 
+      
+        
+        
+        
+    })
+
+
+
+
+
+
+
+    function addRemove(isIncrease){
+
+        if(isIncrease==true){
+            Currentamount=Currentamount+1;
+        }
+        if(isIncrease==false && Currentamount>0){
+
+            Currentamount=Currentamount-1;
+        }
+        
+        var Newfiamount=fiamount*Currentamount
+        document.getElementById("fival").value = Currentamount;
+        document.getElementById("fiamount").innerText=Newfiamount;
+    }
 
     
 
@@ -15,33 +59,34 @@ var fiamount= document.getElementById("fiamount").innerHTML;
 
 // first element add number as well as price increase 
 
-addNum.addEventListener("click",function(){
+// addNum.addEventListener("click",function(){
 
-    Currentamount=Currentamount+1;
-    var Newfiamount=fiamount*Currentamount
-    document.getElementById("fival").value = Currentamount;
-    document.getElementById("fiamount").innerHTML=Newfiamount;
+//     Currentamount=Currentamount+1;
+//     var Newfiamount=fiamount*Currentamount
+//     document.getElementById("fival").value = Currentamount;
+//     document.getElementById("fiamount").innerText=Newfiamount;
   
     
     
     
-})
+// })
 // first element remove element and min price
-var minNum =document.getElementById("fimin");
-minNum.addEventListener("click",function(){
-    Currentamount=Currentamount-1;
-    document.getElementById("fival").value = Currentamount;
-    var Newfiamount=fiamount*Currentamount;
-    document.getElementById("fiamount").innerHTML=Newfiamount
+
+// minNum.addEventListener("click",function(){
+//     Currentamount=Currentamount-1;
+//     var Newfiamount=fiamount*Currentamount;
+//     document.getElementById("fival").value = Currentamount;
+   
+//     document.getElementById("fiamount").innerText=Newfiamount
   
 
-})
+// })
 
 // second element var declare
 var saddNum =document.getElementById("siadd");
 var sCurrentamount =document.getElementById("sival").value;
     sCurrentamount=parseFloat(sCurrentamount);
-var siamount= document.getElementById("siamount").innerHTML;
+var siamount= document.getElementById("siamount").innerText;
     siamount=parseFloat(siamount); 
     
     // add and add price second element
@@ -50,7 +95,7 @@ saddNum.addEventListener("click",function(){
     sCurrentamount=sCurrentamount+1;
     var sNewfiamount=siamount*sCurrentamount
     document.getElementById("sival").value = sCurrentamount;
-    document.getElementById("siamount").innerHTML=sNewfiamount;
+    document.getElementById("siamount").innerText=sNewfiamount;
 
     
     
@@ -62,7 +107,7 @@ sminNum.addEventListener("click",function(){
     sCurrentamount=sCurrentamount-1;
     document.getElementById("sival").value = sCurrentamount;
     var sNewfiamount=siamount*sCurrentamount;
-    document.getElementById("siamount").innerHTML=sNewfiamount
+    document.getElementById("siamount").innerText=sNewfiamount
     
 
 })
@@ -71,15 +116,22 @@ sminNum.addEventListener("click",function(){
 // add amount final chalan
 
 
-// var clickAll = document.getElementsByClassName("btn-default")
-// for (let i = 0; i < clickAll.length; i++) {
-//     let element = clickAll[i];
-//     element.addEventListener("click",function(){
-//         console.log(element)
-//     })
+var clickAll = document.getElementById("checkOut");
+
+clickAll.addEventListener("click",function(){
+        var totalAcc = document.getElementById("rtotal").innerText;
+        totalAcc=parseFloat(totalAcc)
+
+        totalAcc=Newfiamount+sNewfiamount;
+        console.log(totalAcc)
+        
+        
+       
+        
+    })
 
     
-// }
+
 
 
 
