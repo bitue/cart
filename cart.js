@@ -8,28 +8,42 @@ var Currentamount =document.getElementById("fival").value;
 var fiamount= document.getElementById("fiamount").innerText;
     fiamount=parseFloat(fiamount);
 
+var saddNum =document.getElementById("siadd");
+var sCurrentamount =document.getElementById("sival").value;
+    sCurrentamount=parseFloat(sCurrentamount);
+var siamount= document.getElementById("siamount").innerText;
+    siamount=parseFloat(siamount); 
+var minNum =document.getElementById("fimin");
+var sminNum =document.getElementById("simin");
 
 
 
 
-    addNum.addEventListener("click",function(){
+    // addNum.addEventListener("click",function(){
 
-        addRemove(true) 
-      
+    //     addRemove(true) 
+    
+    // })
+  
+
+    // minNum.addEventListener("click",function(){
+
+    //     addRemove(false) 
+
         
-        
-        
-    })
-    var minNum =document.getElementById("fimin");
+    // })
+//     saddNum.addEventListener("click",function(){
+//         caseCOunt(true)
+  
+//     })
 
-    minNum.addEventListener("click",function(){
 
-        addRemove(false) 
-      
-        
-        
-        
-    })
+//     sminNum.addEventListener("click",function(){
+//         caseCOunt(false)
+    
+
+// })
+
 
 
 
@@ -51,6 +65,24 @@ var fiamount= document.getElementById("fiamount").innerText;
         document.getElementById("fival").value = Currentamount;
         document.getElementById("fiamount").innerText=Newfiamount;
     }
+
+
+      
+    function caseCOunt (isIncrease){
+        if(isIncrease==true){
+            sCurrentamount=sCurrentamount+1;
+        }
+        if(isIncrease==false && sCurrentamount>0){
+            sCurrentamount=sCurrentamount-1;
+        }
+       
+        var sNewfiamount=siamount*sCurrentamount
+        document.getElementById("sival").value = sCurrentamount;
+        document.getElementById("siamount").innerText=sNewfiamount;
+    }
+
+
+
 
     
 
@@ -83,52 +115,40 @@ var fiamount= document.getElementById("fiamount").innerText;
 // })
 
 // second element var declare
-var saddNum =document.getElementById("siadd");
-var sCurrentamount =document.getElementById("sival").value;
-    sCurrentamount=parseFloat(sCurrentamount);
-var siamount= document.getElementById("siamount").innerText;
-    siamount=parseFloat(siamount); 
+
     
     // add and add price second element
-saddNum.addEventListener("click",function(){
 
-    sCurrentamount=sCurrentamount+1;
-    var sNewfiamount=siamount*sCurrentamount
-    document.getElementById("sival").value = sCurrentamount;
-    document.getElementById("siamount").innerText=sNewfiamount;
+
+  
+
+
+
+// saddNum.addEventListener("click",function(){
+
+//     sCurrentamount=sCurrentamount+1;
+//     var sNewfiamount=siamount*sCurrentamount
+//     document.getElementById("sival").value = sCurrentamount;
+//     document.getElementById("siamount").innerText=sNewfiamount;
 
     
     
     
-})
+// })
  // remove and min price second element
-var sminNum =document.getElementById("simin");
-sminNum.addEventListener("click",function(){
-    sCurrentamount=sCurrentamount-1;
-    document.getElementById("sival").value = sCurrentamount;
-    var sNewfiamount=siamount*sCurrentamount;
-    document.getElementById("siamount").innerText=sNewfiamount
+// var sminNum =document.getElementById("simin");
+//     sminNum.addEventListener("click",function(){
+//     sCurrentamount=sCurrentamount-1;
+//     var sNewfiamount=siamount*sCurrentamount;
+//     document.getElementById("sival").value = sCurrentamount;
+    
+//     document.getElementById("siamount").innerText=sNewfiamount
     
 
-})
+// })
 
 
-// add amount final chalan
 
-
-var clickAll = document.getElementById("checkOut");
-
-clickAll.addEventListener("click",function(){
-        var totalAcc = document.getElementById("rtotal").innerText;
-        totalAcc=parseFloat(totalAcc)
-
-        totalAcc=Newfiamount+sNewfiamount;
-        console.log(totalAcc)
-        
-        
-       
-        
-    })
 
     
 
